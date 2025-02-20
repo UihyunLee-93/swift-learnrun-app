@@ -148,6 +148,8 @@ iOSInjectionProject/
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
+# Ignore Xcode user interface state files
+*.xcuserstate
 
 # End of https://www.toptal.com/developers/gitignore/api/swift,xcode,visualstudiocode,macos
 LearnRunApp/LearnRunApp.xcodeproj/project.xcworkspace/xcuserdata/uihyun.xcuserdatad/UserInterfaceState.xcuserstate
