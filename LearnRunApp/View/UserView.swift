@@ -1,21 +1,28 @@
 import SwiftUI
 
-struct ProfileView: View {
+struct UserView: View {
     @StateObject var userViewModel = UserViewModel()
 
     var body: some View {
         VStack(spacing: 20) {
-            // 상단: 프로필 이미지 & 유저 정보
-            VStack(spacing: 10) {
+            // 프로필 이미지
+            if let imageData = userViewModel.profileImageData,
+               let uiImage = UIImage(data: imageData) {
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .frame(width: 120, height: 120)
+                    .clipShape(Circle())
+            } else {
                 Image(systemName: "person.circle.fill")
                     .resizable()
-                    .frame(width: 100, height: 100)
+                    .frame(width: 120, height: 120)
                     .foregroundColor(.gray)
-
-                Text(userViewModel.userName)
-                    .font(.title)
-                    .bold()
             }
+            
+            Text(userViewModel.userName)
+                .font(.title)
+                .bold()
+        
             .padding(.top, 20)
             .padding(.bottom,30)
 
@@ -51,7 +58,7 @@ struct ProfileView: View {
     }
 }
 
-// 레벨 선택 UI
+// 레벨 선택
 struct LevelSelectionView: View {
     let title: String
     @Binding var selectedLevel: Int
@@ -75,34 +82,11 @@ struct LevelSelectionView: View {
 }
 
 // 수집한 아이템 리스트 (메달 & 이모지)
-struct CollectiblesView: View {
-    let title: String
-    let items: [String]
 
-    var body: some View {
-        VStack(alignment: .leading, spacing: 5) {
-            Text(title)
-                .font(.subheadline)
-                .bold()
-                .frame(maxWidth: .infinity, alignment: .leading)
 
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 10) {
-                    ForEach(items, id: \.self) { item in
-                        Text(item)
-                            .font(.largeTitle)
-                    }
-                }
-            }
-            .frame(height: 50)
-        }
-        .padding(.horizontal)
-    }
-}
 
-// SwiftUI 프리뷰
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        UserView()
     }
 }

@@ -1,0 +1,20 @@
+[
+    {
+        "category": "swift",
+        "level": 0,
+        "type": "multipleChoice",
+        "question": "Swift에서 변수를 선언할 때 사용하는 키워드는?",
+        "options": ["let", "var", "func", "class", "struct"],
+        "answer": "var",
+        "isCorrect": false
+    },
+    {
+        "category": "it",
+        "level": 1,
+        "type": "ox",
+        "question": "HTML은 프로그래밍 언어다.",
+        "answer": "X",
+        "isCorrect": false
+    }
+]
+
