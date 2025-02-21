@@ -47,13 +47,13 @@ struct StartView: View {
                             Image(uiImage: uiImage)
                                 .resizable()
                                 .scaledToFill()
-                                .frame(width: 50, height: 50) // ✅ 크기 키움
+                                .frame(width: 50, height: 50)
                                 .clipShape(Circle())
                                 .overlay(Circle().stroke(Color.blue, lineWidth: 2))
                         } else {
                             Image(systemName: "person.crop.circle")
                                 .resizable()
-                                .frame(width: 50, height: 50) // ✅ 크기 키움
+                                .frame(width: 50, height: 50)
                                 .foregroundColor(.blue)
                         }
                     }
