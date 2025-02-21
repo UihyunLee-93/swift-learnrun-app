@@ -7,65 +7,56 @@ struct UserProfile {
 struct StartView: View {
     @State private var userProfile = UserProfile()
     @State private var isButtonPressed = false
-
+    @State private var isUserViewPresented = false //  유저뷰 표시 여부
+    @StateObject private var viewModel = QuizViewModel() //viewModel 선언 추가
+    @EnvironmentObject var userViewModel: UserViewModel
     var body: some View {
         NavigationStack {
             ZStack {
                 Color(.systemGray6)
                     .edgesIgnoringSafeArea(.all)
-
+                
                 VStack {
-                    
-                    HStack {
-                        Spacer()
-                        ZStack {
-                            Image(systemName: "person.circle")
-                                .resizable()
-                                .frame(width: 55, height: 55)
-
-                            if userProfile.newData {
-                                Circle()
-                                    .fill(Color.red)
-                                    .frame(width: 13, height: 13)
-                                    .offset(x: 17, y: -20)
-                            }
-                        }
-                    }
-                    .padding(.trailing, 20)
-                    .padding(.top, 10)
-
                     Spacer()
-
-
+                    
                     Text("Learn Run!")
                         .font(.system(size: 70, weight: .bold, design: .rounded))
                         .padding(.bottom, 10)
-
-
+                    
                     Image("run_")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 350, height: 350)
                         .padding(.bottom, 30)
-
-
-                    NavigationLink(destination: CategoryView()) {
+                    
+                    NavigationLink(destination: CategoryView().environmentObject(userViewModel)) {
                         Text("Start")
                             .frame(width: 160, height: 50)
-                            .background(isButtonPressed ? Color.blue : Color.clear)
-                            .foregroundColor(isButtonPressed ? .white : .blue)
+                            .background(Color.blue)
+                            .foregroundColor(.white)
                             .cornerRadius(10)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color.blue, lineWidth: 1)
-                            )
                     }
-                    .simultaneousGesture(TapGesture().onEnded {
-                        isButtonPressed.toggle()
-                    })
-                    .padding(.top, 20)
-
-                    Spacer()
+                    .padding(.bottom, 50)
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink(destination: UserProfileView().environmentObject(userViewModel)) {
+                        if let imageData = userViewModel.profileImageData,
+                           let uiImage = UIImage(data: imageData) {
+                            Image(uiImage: uiImage)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 50, height: 50) // ✅ 크기 키움
+                                .clipShape(Circle())
+                                .overlay(Circle().stroke(Color.blue, lineWidth: 2))
+                        } else {
+                            Image(systemName: "person.crop.circle")
+                                .resizable()
+                                .frame(width: 50, height: 50) // ✅ 크기 키움
+                                .foregroundColor(.blue)
+                        }
+                    }
                 }
             }
         }
@@ -75,4 +66,6 @@ struct StartView: View {
 
 #Preview {
     StartView()
+        .environmentObject(UserViewModel())
+        .environmentObject(QuizViewModel())
 }

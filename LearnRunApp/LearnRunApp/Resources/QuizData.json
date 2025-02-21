@@ -1,20 +1,389 @@
 [
+    
     {
         "category": "swift",
         "level": 0,
         "type": "multipleChoice",
         "question": "Swift에서 변수를 선언할 때 사용하는 키워드는?",
         "options": ["let", "var", "func", "class", "struct"],
-        "answer": "var",
-        "isCorrect": false
+        "answer": "var"
+    },
+    {
+        "category": "swift",
+        "level": 0,
+        "type": "multipleChoice",
+        "question": "Swift에서 상수를 선언할 때 사용하는 키워드는?",
+        "options": ["let", "var", "const", "define", "static"],
+        "answer": "let"
+    },
+    {
+        "category": "swift",
+        "level": 0,
+        "type": "multipleChoice",
+        "question": "Swift의 기본 데이터 타입이 아닌 것은?",
+        "options": ["Int", "String", "Boolean", "Float", "Double"],
+        "answer": "Boolean"
+    },
+    {
+        "category": "swift",
+        "level": 0,
+        "type": "multipleChoice",
+        "question": "Swift에서 배열을 선언할 때 사용하는 기본 타입은?",
+        "options": ["Array", "List", "Dict", "Set", "Tuple"],
+        "answer": "Array"
+    },
+    {
+        "category": "swift",
+        "level": 0,
+        "type": "multipleChoice",
+        "question": "Swift에서 기본적으로 제공하는 컬렉션 타입이 아닌 것은?",
+        "options": ["Array", "Dictionary", "Tuple", "Set", "Stack"],
+        "answer": "Stack"
+    },
+    
+    
+    {
+        "category": "swift",
+        "level": 1,
+        "type": "multipleChoice",
+        "question": "Swift에서 옵셔널을 언래핑하는 방법이 아닌 것은?",
+        "options": ["force unwrapping (!)", "optional binding (if let)", "guard let", "closure unwrapping", "nil coalescing"],
+        "answer": "closure unwrapping"
+    },
+    {
+        "category": "swift",
+        "level": 1,
+        "type": "multipleChoice",
+        "question": "Swift에서 프로토콜을 채택할 때 사용하는 키워드는?",
+        "options": ["interface", "implements", "protocol", "conforms", "extends"],
+        "answer": "protocol"
+    },
+    {
+        "category": "swift",
+        "level": 1,
+        "type": "multipleChoice",
+        "question": "Swift에서 메모리 관리 방식으로 사용되는 개념은?",
+        "options": ["Garbage Collection", "Manual Memory Management", "ARC", "Smart Pointers", "Pointer Arithmetic"],
+        "answer": "ARC"
+    },
+    
+    
+    {
+        "category": "it",
+        "level": 0,
+        "type": "multipleChoice",
+        "question": "다음 중 컴퓨터의 입력 장치가 아닌 것은?",
+        "options": ["키보드", "마우스", "스캐너", "프린터", "웹캠"],
+        "answer": "프린터"
+    },
+    {
+        "category": "it",
+        "level": 0,
+        "type": "multipleChoice",
+        "question": "컴퓨터 네트워크에서 IP 주소를 도메인 이름으로 변환하는 서비스는?",
+        "options": ["HTTP", "DNS", "FTP", "TCP", "UDP"],
+        "answer": "DNS"
+    },
+    {
+        "category": "it",
+        "level": 0,
+        "type": "multipleChoice",
+        "question": "파일을 저장하는 기본 단위는?",
+        "options": ["bit", "byte", "kilobyte", "megabyte", "gigabyte"],
+        "answer": "byte"
+    },
+    {
+        "category": "it",
+        "level": 0,
+        "type": "multipleChoice",
+        "question": "RAM(메모리)의 역할은?",
+        "options": ["데이터 저장", "프로그램 실행 속도 향상", "인터넷 연결", "소프트웨어 설치", "보안 관리"],
+        "answer": "프로그램 실행 속도 향상"
+    },
+    
+    
+    {
+        "category": "it",
+        "level": 1,
+        "type": "multipleChoice",
+        "question": "OSI 7계층에서 '라우터(Router)'가 속하는 계층은?",
+        "options": ["물리 계층", "데이터링크 계층", "네트워크 계층", "응용 계층"],
+        "answer": "네트워크 계층"
     },
     {
         "category": "it",
         "level": 1,
-        "type": "ox",
-        "question": "HTML은 프로그래밍 언어다.",
-        "answer": "X",
-        "isCorrect": false
+        "type": "multipleChoice",
+        "question": "인터넷에서 데이터를 송수신하는 프로토콜은?",
+        "options": ["HTTP", "FTP", "TCP/IP", "SMTP", "SSH"],
+        "answer": "TCP/IP"
+    },
+    {
+        "category": "it",
+        "level": 1,
+        "type": "multipleChoice",
+        "question": "웹 브라우저에서 '쿠키(Cookie)'의 역할은?",
+        "options": ["사용자 데이터를 저장", "비밀번호 암호화", "악성 코드 탐지", "네트워크 속도 개선", "컴퓨터 바이러스 제거"],
+        "answer": "사용자 데이터를 저장"
+    },
+    
+    
+    {
+        "category": "swift",
+        "level": 2,
+        "type": "multipleChoice",
+        "question": "Swift에서 메모리 관리 방식으로 사용되는 개념은?",
+        "options": ["Garbage Collection", "Manual Memory Management", "ARC", "Smart Pointers", "Pointer Arithmetic"],
+        "answer": "ARC"
+    },
+    {
+        "category": "swift",
+        "level": 2,
+        "type": "multipleChoice",
+        "question": "Swift에서 구조체와 클래스의 차이점이 아닌 것은?",
+        "options": ["구조체는 값 타입, 클래스는 참조 타입", "구조체는 상속 가능", "클래스는 초기화 가능", "클래스는 메모리에 참조로 저장"],
+        "answer": "구조체는 상속 가능"
+    },
+    {
+        "category": "swift",
+        "level": 2,
+        "type": "multipleChoice",
+        "question": "다음 중 Swift의 접근 제어자가 아닌 것은?",
+        "options": ["open", "public", "private", "sealed", "fileprivate"],
+        "answer": "sealed"
+    },
+    {
+        "category": "swift",
+        "level": 2,
+        "type": "multipleChoice",
+        "question": "Swift에서 프로토콜에 기본 구현을 제공하는 기능은?",
+        "options": ["Extension", "Inheritance", "Protocol Default", "Class Override", "Mixin"],
+        "answer": "Extension"
+    },
+    
+    
+    {
+        "category": "swift",
+        "level": 3,
+        "type": "multipleChoice",
+        "question": "Swift의 Combine 프레임워크에서 데이터를 비동기적으로 처리하는 타입은?",
+        "options": ["Publisher", "Observable", "Flow", "Emitter", "Reactive"],
+        "answer": "Publisher"
+    },
+    {
+        "category": "swift",
+        "level": 3,
+        "type": "multipleChoice",
+        "question": "Swift에서 @State를 사용할 때의 특징이 아닌 것은?",
+        "options": ["뷰의 상태를 관리한다", "값이 변경되면 뷰가 다시 렌더링된다", "뷰 외부에서 직접 변경 가능하다", "SwiftUI에서만 사용 가능하다"],
+        "answer": "뷰 외부에서 직접 변경 가능하다"
+    },
+    {
+        "category": "swift",
+        "level": 3,
+        "type": "multipleChoice",
+        "question": "Swift의 Codable 프로토콜이 제공하는 기능은?",
+        "options": ["데이터 직렬화 및 디코딩", "네트워크 요청 처리", "UI 상태 관리", "메모리 최적화"],
+        "answer": "데이터 직렬화 및 디코딩"
+    },
+    
+    
+    {
+        "category": "it",
+        "level": 2,
+        "type": "multipleChoice",
+        "question": "컴퓨터가 데이터를 저장하는 가장 작은 단위는?",
+        "options": ["bit", "byte", "kilobyte", "megabyte"],
+        "answer": "bit"
+    },
+    {
+        "category": "it",
+        "level": 2,
+        "type": "multipleChoice",
+        "question": "운영체제에서 프로세스 간 통신(IPC) 방식이 아닌 것은?",
+        "options": ["Shared Memory", "Message Queue", "Socket", "DNS"],
+        "answer": "DNS"
+    },
+    {
+        "category": "it",
+        "level": 2,
+        "type": "multipleChoice",
+        "question": "SQL에서 데이터를 검색하는 기본 키워드는?",
+        "options": ["SELECT", "UPDATE", "DELETE", "INSERT"],
+        "answer": "SELECT"
+    },
+    
+    
+    {
+        "category": "it",
+        "level": 3,
+        "type": "multipleChoice",
+        "question": "컴퓨터 보안에서 XSS 공격의 주요 대상은?",
+        "options": ["웹 애플리케이션", "운영체제", "네트워크 장비", "파일 시스템"],
+        "answer": "웹 애플리케이션"
+    },
+    {
+        "category": "it",
+        "level": 3,
+        "type": "multipleChoice",
+        "question": "DNS(Domain Name System)의 주요 역할은?",
+        "options": ["IP 주소를 도메인으로 변환", "데이터 암호화", "네트워크 방화벽 설정", "파일 저장 관리"],
+        "answer": "IP 주소를 도메인으로 변환"
+    },
+    {
+        "category": "it",
+        "level": 3,
+        "type": "multipleChoice",
+        "question": "블록체인의 특징이 아닌 것은?",
+        "options": ["분산 원장", "변경 불가능성", "중앙 집중식 저장", "암호화 보안"],
+        "answer": "중앙 집중식 저장"
+    },
+    
+    {
+        "category": "swift",
+        "level": 3,
+        "type": "multipleChoice",
+        "question": "Swift의 Combine 프레임워크에서 데이터를 비동기적으로 처리하는 타입은?",
+        "options": ["Publisher", "Observable", "Flow", "Emitter", "Reactive"],
+        "answer": "Publisher"
+    },
+    {
+        "category": "swift",
+        "level": 3,
+        "type": "multipleChoice",
+        "question": "Swift에서 @State를 사용할 때의 특징이 아닌 것은?",
+        "options": ["뷰의 상태를 관리한다", "값이 변경되면 뷰가 다시 렌더링된다", "뷰 외부에서 직접 변경 가능하다", "SwiftUI에서만 사용 가능하다"],
+        "answer": "뷰 외부에서 직접 변경 가능하다"
+    },
+    {
+        "category": "swift",
+        "level": 3,
+        "type": "multipleChoice",
+        "question": "Swift에서 Task를 사용할 때 비동기 코드 실행을 위한 키워드는?",
+        "options": ["await", "async", "async await", "defer", "try await"],
+        "answer": "async await"
+    },
+    {
+        "category": "swift",
+        "level": 3,
+        "type": "multipleChoice",
+        "question": "SwiftUI에서 뷰의 변경을 감지하는 프로퍼티 래퍼는?",
+        "options": ["@State", "@Binding", "@ObservedObject", "@Environment", "@Published"],
+        "answer": "@ObservedObject"
+    },
+    {
+        "category": "swift",
+        "level": 3,
+        "type": "multipleChoice",
+        "question": "Swift의 Codable 프로토콜이 제공하는 기능은?",
+        "options": ["데이터 직렬화 및 디코딩", "네트워크 요청 처리", "UI 상태 관리", "메모리 최적화"],
+        "answer": "데이터 직렬화 및 디코딩"
+    },
+    {
+        "category": "swift",
+        "level": 3,
+        "type": "multipleChoice",
+        "question": "Swift의 KeyPath 기능을 사용하면 무엇을 할 수 있는가?",
+        "options": ["프로퍼티 값을 참조할 수 있다", "네트워크 요청을 수행할 수 있다", "UI를 렌더링할 수 있다", "메모리 사용량을 줄일 수 있다"],
+        "answer": "프로퍼티 값을 참조할 수 있다"
+    },
+    {
+        "category": "swift",
+        "level": 3,
+        "type": "multipleChoice",
+        "question": "Swift에서 동시성(Concurrency)을 지원하는 기능이 아닌 것은?",
+        "options": ["DispatchQueue", "Combine", "Task", "OperationQueue", "Threads"],
+        "answer": "Threads"
+    },
+    {
+        "category": "swift",
+        "level": 3,
+        "type": "multipleChoice",
+        "question": "Swift에서 @EnvironmentObject는 언제 사용되는가?",
+        "options": ["뷰 간에 데이터를 공유할 때", "네트워크 요청을 보낼 때", "로컬 저장소에 데이터를 저장할 때", "컬렉션을 필터링할 때"],
+        "answer": "뷰 간에 데이터를 공유할 때"
+    },
+    {
+        "category": "swift",
+        "level": 3,
+        "type": "multipleChoice",
+        "question": "Swift의 async/await 패턴에서 Task의 역할은?",
+        "options": ["비동기 작업을 실행한다", "데이터를 인코딩한다", "UI를 렌더링한다", "메모리를 관리한다"],
+        "answer": "비동기 작업을 실행한다"
+    },
+    {
+        "category": "swift",
+        "level": 3,
+        "type": "multipleChoice",
+        "question": "Swift에서 Combine 프레임워크를 사용할 때 데이터 스트림을 결합하는 방법은?",
+        "options": ["merge", "combineLatest", "zip", "map", "reduce"],
+        "answer": "combineLatest"
+    },
+    
+    
+    {
+        "category": "it",
+        "level": 3,
+        "type": "multipleChoice",
+        "question": "컴퓨터 보안에서 XSS 공격의 주요 대상은?",
+        "options": ["웹 애플리케이션", "운영체제", "네트워크 장비", "파일 시스템"],
+        "answer": "웹 애플리케이션"
+    },
+    {
+        "category": "it",
+        "level": 3,
+        "type": "multipleChoice",
+        "question": "DNS(Domain Name System)의 주요 역할은?",
+        "options": ["IP 주소를 도메인으로 변환", "데이터 암호화", "네트워크 방화벽 설정", "파일 저장 관리"],
+        "answer": "IP 주소를 도메인으로 변환"
+    },
+    {
+        "category": "it",
+        "level": 3,
+        "type": "multipleChoice",
+        "question": "블록체인의 특징이 아닌 것은?",
+        "options": ["분산 원장", "변경 불가능성", "중앙 집중식 저장", "암호화 보안"],
+        "answer": "중앙 집중식 저장"
+    },
+    {
+        "category": "it",
+        "level": 3,
+        "type": "multipleChoice",
+        "question": "네트워크 프로토콜 중 보안이 강화된 HTTP 버전은?",
+        "options": ["HTTP", "HTTPS", "FTP", "TCP", "UDP"],
+        "answer": "HTTPS"
+    },
+    {
+        "category": "it",
+        "level": 3,
+        "type": "multipleChoice",
+        "question": "데이터베이스에서 인덱스를 사용하는 주된 이유는?",
+        "options": ["데이터 무결성을 보장하기 위해", "데이터 검색 속도를 향상하기 위해", "데이터를 암호화하기 위해", "데이터를 압축하기 위해"],
+        "answer": "데이터 검색 속도를 향상하기 위해"
+    },
+    {
+        "category": "it",
+        "level": 3,
+        "type": "multipleChoice",
+        "question": "공개 키 암호화(Public Key Cryptography)에서 사용하는 주요 알고리즘은?",
+        "options": ["AES", "RSA", "SHA-256", "MD5", "Blowfish"],
+        "answer": "RSA"
+    },
+    {
+        "category": "it",
+        "level": 3,
+        "type": "multipleChoice",
+        "question": "네트워크에서 VPN의 역할은?",
+        "options": ["보안이 강화된 원격 접속을 제공", "데이터 압축을 수행", "IP 주소를 동적으로 변경", "인터넷 속도를 증가"],
+        "answer": "보안이 강화된 원격 접속을 제공"
+    },
+    {
+        "category": "it",
+        "level": 3,
+        "type": "multipleChoice",
+        "question": "운영체제에서 가상 메모리를 사용하는 주된 이유는?",
+        "options": ["프로세스 간 데이터 공유", "RAM 부족 시 추가 메모리 제공", "CPU 속도를 향상", "네트워크 속도를 증가"],
+        "answer": "RAM 부족 시 추가 메모리 제공"
     }
 ]
-
+ 

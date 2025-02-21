@@ -1,14 +1,7 @@
 import SwiftUI
 
-
-struct QuizCategory {
-    var isSwiftSelected: Bool = false
-    var isITSelected: Bool = false
-}
-
-
 struct CategoryView: View {
-    @State private var quizCategory = QuizCategory()
+    @EnvironmentObject var viewModel: QuizViewModel
     @State private var showQuizView = false
 
     var body: some View {
@@ -22,58 +15,37 @@ struct CategoryView: View {
 
                     HStack(spacing: 20) {
                         Button(action: {
-                            quizCategory.isSwiftSelected.toggle()
-                            quizCategory.isITSelected = false
+                            viewModel.changeCategory(to: "swift")
+                            showQuizView = true
                         }) {
                             Text("Swift")
                                 .frame(width: 155, height: 60)
-                                .background(quizCategory.isSwiftSelected ? Color.blue.opacity(0.7) : Color.white)
-                                .foregroundColor(quizCategory.isSwiftSelected ? .white : .blue)
+                                .background(Color.blue.opacity(0.7))
+                                .foregroundColor(.white)
                                 .cornerRadius(10)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 10)
-                                        .stroke(Color.blue, lineWidth: 2)
-                                )
                         }
 
                         Button(action: {
-                            quizCategory.isITSelected.toggle()
-                            quizCategory.isSwiftSelected = false
+                            viewModel.changeCategory(to: "it")
+                            showQuizView = true
                         }) {
                             Text("IT")
                                 .frame(width: 155, height: 60)
-                                .background(quizCategory.isITSelected ? Color.blue.opacity(0.7) : Color.white)
-                                .foregroundColor(quizCategory.isITSelected ? .white : .blue)
+                                .background(Color.blue.opacity(0.7))
+                                .foregroundColor(.white)
                                 .cornerRadius(10)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 10)
-                                        .stroke(Color.blue, lineWidth: 2)
-                                )
                         }
                     }
                     .padding(.bottom, 40)
 
-                    NavigationLink(destination: QuizView(), isActive: $showQuizView) {
-                        Text("Start")
-                            .frame(width: 180, height: 50)
-                            .background((quizCategory.isSwiftSelected || quizCategory.isITSelected) ? Color.blue : Color.clear)
-                            .foregroundColor((quizCategory.isSwiftSelected || quizCategory.isITSelected) ? .white : .blue)
-                            .cornerRadius(10)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color.blue, lineWidth: 2)
-                            )
+                    NavigationLink(
+                        destination: QuizView().environmentObject(viewModel),
+                        isActive: $showQuizView
+                    ) {
+                        EmptyView()
                     }
-                    .disabled(!(quizCategory.isSwiftSelected || quizCategory.isITSelected))
-                    .padding(.top, 40)
-
-                    Spacer().frame(height: 40)
                 }
             }
         }
     }
-}
-
-#Preview {
-    CategoryView()
 }

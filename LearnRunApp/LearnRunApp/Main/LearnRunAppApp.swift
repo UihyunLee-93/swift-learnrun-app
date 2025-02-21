@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct LearnRunAppApp: App {
+    @StateObject private var quizViewModel = QuizViewModel()
+    @StateObject private var userViewModel = UserViewModel()
     var body: some Scene {
         WindowGroup {
             StartView()
+                .environmentObject(quizViewModel)
+                .environmentObject(userViewModel)
         }
     }
 }
