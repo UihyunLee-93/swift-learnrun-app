@@ -18,7 +18,7 @@ struct ResultView: View {
         NavigationStack {
             ZStack {
                 Color(.systemGray6)
-                    .edgesIgnoringSafeArea(.all)
+                    .ignoresSafeArea()
 
                 VStack {
                     Text("수집에 성공하셨습니다")

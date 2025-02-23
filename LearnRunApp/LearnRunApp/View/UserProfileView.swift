@@ -16,7 +16,7 @@ struct UserProfileView: View {
         NavigationStack {
             ZStack {
                 Color(.systemGray6)
-                    .edgesIgnoringSafeArea(.all)
+                    .ignoresSafeArea()
 
                 VStack(spacing: 15) {
                  

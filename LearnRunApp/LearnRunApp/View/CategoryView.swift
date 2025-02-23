@@ -8,7 +8,7 @@ struct CategoryView: View {
         NavigationStack {
             ZStack {
                 Color(.systemGray6)
-                    .edgesIgnoringSafeArea(.all)
+                    .ignoresSafeArea()
 
                 VStack {
                     Spacer().frame(height: 30)
